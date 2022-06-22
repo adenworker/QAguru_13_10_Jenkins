@@ -12,7 +12,8 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
+        /**Подключаем запуск браузера удаленно в селеноиде, на отдельном от сервера Дженкинса сервере.
+         * Также включаем возможность писать видео теста.*/
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
