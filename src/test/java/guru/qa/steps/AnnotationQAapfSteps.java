@@ -1,4 +1,4 @@
-package guru.qa.annotations_steps;
+package guru.qa.steps;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;

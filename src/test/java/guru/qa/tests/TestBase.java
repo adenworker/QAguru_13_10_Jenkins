@@ -6,11 +6,13 @@ import guru.qa.attachments.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
     @BeforeAll
     static void setUp() {
+        /**Подключенный в этом классе Allure Selenide listener будет работать и для всех наследующих классов с тестами.*/
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         /**Подключаем запуск браузера удаленно в селеноиде, на отдельном от сервера Дженкинса сервере.
          * Также включаем возможность писать видео теста.*/
